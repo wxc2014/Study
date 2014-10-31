@@ -1,0 +1,61 @@
+#include "resourcedef.h"
+
+//the sound resources
+SOUND_ID_CREATE	WAVE	create.wav
+SOUND_ID_MUSIC	WAVE	techno.wav
+SOUND_ID_ENERGIZE	WAVE	energize.wav
+SOUND_ID_BEAM	WAVE	beam.wav
+SOUND_ID_TELEPORT	WAVE	teleport.wav
+SOUND_ID_WARP	WAVE	warp.wav
+
+//icon resources
+ICON_T3DX	ICON	T3DX.ICO
+
+//cursor resources
+CURSOR_CROSSHAIR	CURSOR	crosshair.cur
+
+//menu resource
+MainMenu MENU DISCARDABLE
+{
+	POPUP "&File"
+	{
+		MENUITEM "&Open", MENU_FILE_ID_OPEN
+		MENUITEM "&Close", MENU_FILE_ID_CLOSE
+		MENUITEM "&Save", MENU_FILE_ID_SAVE
+		MENUITEM "&Exit", MENU_FILE_ID_EXIT
+
+		/*POPUP "&Build"
+		{
+			MENUITEM "&Build", MENU_BUILD_ID_BUILD
+			MENUITEM "&Rebuild", MENU_BUILD_ID_REBUILD
+			MENUITEM "&Clean", MENU_BUILD_ID_CLEAN
+		}*/
+	}
+
+	POPUP "&Help"
+	{
+		MENUITEM "&About", MENU_HELP_ABOUT
+	}
+}
+
+//the menu resource
+SoundMenu MENU	DISCARDABLE
+{
+	POPUP "File"
+	{
+		MENUITEM "&Exit", MENU_FILE_ID_EXIT
+	}
+
+	POPUP "&PlaySound"
+	{
+		MENUITEM "Energize",		MENU_PLAY_ID_ENERGIZE
+		MENUITEM "Beam Me Up",		MENU_PLAY_ID_BEAM
+		MENUITEM "Engage Teleporter",	MENU_PLAY_ID_TELEPORT
+		MENUITEM "Quantum Warp Teleport",	MENU_PLAY_ID_WARP
+	}
+
+	POPUP "Help"
+	{
+		MENUITEM "About",	MENU_HELP_ABOUT
+	}
+}
